@@ -93,8 +93,8 @@ df_combinado
 """6) Crie gráfico de linha que apresente as variáveis Receita Líquida e Receita Real ao longo dos anos (no mesmo gráfico) (peso: 1,0)"""
 
 import matplotlib.pyplot as plt
-df_receita_liquida = df_combinada.groupby("Ano")["Receita Líquida"].mean()
-df_receita_real = df_combinada.groupby("Ano")["Receita Real"].mean()
+df_receita_liquida = df_combinado.groupby("Ano")["Receita Líquida"].mean()
+df_receita_real = df_combinado.groupby("Ano")["Receita Real"].mean()
 plt.plot(df_receita_liquida, label="Receita Líquida")
 plt.plot(df_receita_real, label="Receita Real")
 plt.xlabel("Ano")
