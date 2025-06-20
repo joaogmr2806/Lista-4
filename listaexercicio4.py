@@ -27,7 +27,7 @@ write = 'Este projeto tem como objetivo integrar análise de dados contábeis de
 Dica: Utilize `head(len(df))`
 """
 
-df = pd.read_csv("/content/empresas_dados.csv", sep=";")
+df = pd.read_csv("empresas_dados.csv", sep=";")
 
 df.head(len(df))
 
