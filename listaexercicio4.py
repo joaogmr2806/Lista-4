@@ -12,7 +12,7 @@ st.title("Projeto Final – Análise Contábil com Ajuste Econômico")
 st.write("Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.")
 
 # 2)
-df = pd.read_csv("empresas_dados.csv", sep=";")
+df = pd.rea_csv("empresas_dados.csv", sep=";")
 st.subheader("2) Dados do arquivo empresas_dados.csv")
 st.dataframe(df.head(len(df)))
 
