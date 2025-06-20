@@ -66,7 +66,6 @@ plt.show()
 - Apresente a df para checar se tudo deu certo
 """
 
-!pip install ipeadatapy
 import ipeadatapy as ip
 
 df_ipca = ip.timeseries("PRECOS_IPCAG")
