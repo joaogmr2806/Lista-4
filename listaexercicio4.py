@@ -46,17 +46,17 @@ df['Margem Líquida (%)'] = (df['Lucro Líquido'] / df['Receita Líquida']) * 10
 df['ROA (%)'] = (df['Lucro Líquido'] / df['Ativo Total']) * 100
 
 
-df_ano = df.groupby('Ano')[['Margem Líquida (%)', 'ROA (%)']].mean().reset_index()
+fig, ax = plt.subplots()
 
+ax.plot(df_ano['Ano'], df_ano['Margem Líquida (%)'], marker='o', label='Margem Líquida (%)')
+ax.plot(df_ano['Ano'], df_ano['ROA (%)'], marker='o', label='ROA (%)')
 
+ax.set_title('Indicadores Margem Líquida e ROA por Ano')
+ax.set_xlabel('Ano')
+ax.set_ylabel('Percentual (%)')
+ax.legend()
 
-plt.plot(df_ano['Ano'], df_ano['Margem Líquida (%)'], marker='o', label='Margem Líquida (%)')
-plt.plot(df_ano['Ano'], df_ano['ROA (%)'], marker='o', label='ROA (%)')
-plt.title('Indicadores Margem Líquida e ROA por Ano')
-plt.xlabel('Ano')
-plt.ylabel('Percentual (%)')
-plt.legend()
-plt.show()
+st.pyplot(fig)
 
 """4) Utilize o pacote ipeadatapy e faça busca para encontrar o indicador que traga o IPCA, taxa de variação, em % e anual: (peso: 2,0)
 
